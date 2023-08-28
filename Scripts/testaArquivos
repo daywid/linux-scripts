@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#echo "Digite o nome do arquivo"
+#read NOME
+#test "&NOME" = -d &&  "$NOME é um diretório"  
+#test "&NOME" != -d && "$NOME não é um diretório"
+
+echo -n "Digite o arquivo: "
+read ARQUIVO
+test -d "$ARQUIVO" && echo "$ARQUIVO é um diretorio"
+test -f "$ARQUIVO" && echo "$ARQUIVO é um arquivo"
+test -f "$ARQUIVO" -o -d "$ARQUIVO" || echo "o arquivo '$ARQUIVO' não foi encontrado "
