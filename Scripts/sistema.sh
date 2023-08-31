@@ -1,21 +1,26 @@
 #!/bin/bash
-#Autor: Day 23/08/2023
-#Script de demonstração de informações do sistema.
-echo
-#Comando echo, organizando com linhas vazias.
-#Comando echo e "  " frase em tela.
-echo -n "Vou buscar os dados do sistema, posso continuar? (sn) "
+# sistema.sh - script que mostra informações sobre o sistema
+# Autor - Xis
+
+# Pede uma confirmação do usuário antes de executar 
+echo "Vou buscar os dados do sistema. Posso Continuar? [sn]"
 read RESPOSTA
+
+# Se o usuário digitou 'n', o script será interrompido
 test "$RESPOSTA" = "n" && exit
-test "$RESPOSTA" = "N" && exit
-echo "Data do sistema:"
+
+# O date mostra a data e a hora correntes
+echo "Data e horário:"
 date
 echo
-echo "Espaço utilizado no disco:"
+
+# O df mostra as partições e quanto cada uma ocupa no disco
+echo "Uso do disco:"
 df
 echo
-echo "Usuários logados:"
+
+# O w mostra os usuários que estão conectados nesta máquina
+echo "Usuários conectados:"
 w
-echo "Fim de script..."
 echo
-echo
+
