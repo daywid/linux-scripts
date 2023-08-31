@@ -1,3 +1,3 @@
 # linux-scripts
 
-Playing with scripts for linux
+Playing with linux scripts
